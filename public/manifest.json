@@ -1,0 +1,21 @@
+{
+  "short_name": "Counter",
+  "name": "MTG Counter",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.com/4d96323b-8602-4f92-bc93-4f2648ed9e86%2Flogo192.png?v=1564943348908",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn.glitch.com/4d96323b-8602-4f92-bc93-4f2648ed9e86%2Flogo512.png?v=1564943349006",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}

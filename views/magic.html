@@ -1,0 +1,92 @@
+<!--
+        Todo:
+        refactor css/js DONE
+        make names of players adjustable
+        make number of players adjustable
+        add responsive design
+
+-->
+
+<html>
+
+<head>
+    <title>MtG Counter</title>
+    <link rel="stylesheet" type="text/css" href="./magic.css">
+    
+    <link rel="manifest" href="/manifest.json">
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+  <script src="./NoSleep.min.js"></script>
+
+  
+    
+
+   
+    <h1 id="debugging">
+        Under Construction...
+    </h1>
+
+  <div class="container">
+    
+  
+<div class="wrapper"> 
+  
+  <!--<input type="button" id="toggle" value="Wake Lock is disabled" />-->
+
+    <div id="containerPlayerOne">
+        <input type="text" placeholder="Player#1" />
+        <div id="LPPlayerOne">
+            20
+        </div>
+        <div id="ControlsPlayerOne">
+
+            <button onclick="minus(0)">-</button>
+            <button onclick="plus(0)">+</button>
+        </div>
+    </div>
+
+    <div id="containerPlayerTwo">
+        <input type="text" placeholder="Player#2" />
+        <div id="LPPlayerTwo">
+            20
+        </div>
+        <div id="ControlsPlayerTwo">
+            <button onclick="minus(1)">-</button>
+            <button onclick="plus(1)">+</button>
+        </div>
+  </div>
+  </div>
+  </div>
+
+  
+  <script src="./magic.js"></script>
+  <script>
+      var noSleep = new NoSleep();
+      var wakeLockEnabled = false;
+      var body = document.querySelector("body");
+      //var toggleEl = document.querySelector("#toggle");
+      body.addEventListener('click', function() {
+        if(!wakeLockEnabled){
+        //if (!wakeLockEnabled) {
+          noSleep.enable(); // keep the screen on!
+          //wakeLockEnabled = true;
+          wakeLockEnabled = true;
+          
+        }
+          //toggleEl.value = "Wake Lock is enabled";
+          //document.body.style.backgroundColor = "green";
+        //} else {
+          //noSleep.disable(); // let the screen turn off.
+          //wakeLockEnabled = false;
+          //toggleEl.value = "Wake Lock is disabled";
+          //document.body.style.backgroundColor = "";
+       // }
+      }, false);
+    </script>
+  </body>
+</html>
