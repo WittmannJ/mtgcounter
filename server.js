@@ -7,13 +7,15 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// we've started you off with Express, 
+// we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
 // init sqlite db
+// const path = require('path');
+// const dbPath = path.resolve(__dirname, 'sqlite.db');
 var fs = require('fs');
 var dbFile = './.data/sqlite.db';
 var exists = fs.existsSync(dbFile);
@@ -26,7 +28,7 @@ db.serialize(function(){
     db.run('CREATE TABLE Dreams (dream TEXT)');
     db.run('CREATE TABLE Bucketlist (idea TEXT)');
     console.log('New table Dreams created!');
-    
+
     // insert default dreams
     db.serialize(function() {
       db.run('INSERT INTO Dreams (dream) VALUES ("Find and count some sheep"), ("Climb a really tall mountain"), ("Wash the dishes"), ("Build a really cool progressive web app with workbox")');
@@ -82,7 +84,7 @@ app.get('/debts', function(request, response){
 })
 
 app.get('/websec', function(request, response){
-  
+
   let notes = {ideas: []};
   let idea_one = "Seite 34 - Wie loest man das Problem (viele passwoerter), es gibt mehrere Varianten";
   let idea_two = "Erinnern was man bei Signatur falsch machen kann bzw. wie ein Hacker eine Signatur in einem XML-File faelschen kann um sich als anderer nutzer auszugeben";
@@ -91,7 +93,7 @@ app.get('/websec', function(request, response){
   //response.send(notes.toString());
 //  response.writeHead(200, {'Content-Type': 'application/json'});
   response.json(notes);
-  
+
 })
 
 app.get('/')
