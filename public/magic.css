@@ -1,0 +1,68 @@
+
+
+body {
+
+        background-color: black;
+        font-size: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+color: white;
+font-size: 100%;
+}
+
+#debugging{
+        /* visibility: hidden; */
+        display:none;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    border:0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+#LPPlayerOne, #LPPlayerTwo {
+    font-size: 20vw;
+    text-align: center;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button {
+        color: black;
+        font-size: 5vh;
+        height: 15vh;
+        width: 20vh;
+}
+
+.container {
+  
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 90vh;
+  align-items: center;
+  justify-items: center;
+  
+ 
+}
+
+#ControlsPlayerOne{
+  text-align: center;
+}
+
+#ControlsPlayerTwo{
+  text-align: center;
+}
